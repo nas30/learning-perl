@@ -5,9 +5,19 @@ use warnings;
 
 # subroutines
 sub average{
+    my $sum;
+    foreach (@_){
+        $sum += $_;
+    }
+    return $sum/$#_;
 }
 
 sub above_average{
+    foreach(@_){
+        if ($_ > average(@_)){
+            return $_;
+        } else {}
+    }
 }
 
 
